@@ -2,10 +2,13 @@ const express = require("express");
 //const morgan = require("morgan");
 
 const app = express();
+/*------------------------------- Exercise 1 -------------------------------*/
 
 app.get('/greetings/:name', (req, res) => {
     res.send(`It's great to see you again, ${req.params.name}!`)
 })
+
+/*------------------------------- Exercise 2 -------------------------------*/
 
 app.get('/roll/:number', (req, res) => {
     let number = parseInt(req.params.number)
@@ -22,6 +25,7 @@ app.listen(3000, () => {
     console.log("listening on port 3000");
 });
 
+/*------------------------------- Exercise 3 -------------------------------*/
 app.get("/collectibles/:index", (req, res) => {
 
     const index = req.params.index
@@ -43,7 +47,7 @@ app.get("/collectibles/:index", (req, res) => {
       }
 })
 
-
+/*------------------------------- Exercise 4 -------------------------------*/
 
 app.get("/shoes", (req, res) => {
     const minPrice = req.query.minPrice;
